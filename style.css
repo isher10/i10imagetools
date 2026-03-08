@@ -100,3 +100,44 @@ padding:8px 12px;
 background:#0a84ff;
 border-radius:5px;
 }
+/* Top Navigation */
+
+.topnav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#4b5aa7;
+padding:12px 15px;
+color:white;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+}
+
+.menu-icon{
+font-size:26px;
+cursor:pointer;
+}
+
+/* Mobile Menu */
+
+.navbar{
+display:none;
+flex-direction:column;
+background:#ffffff;
+text-align:left;
+}
+
+.navbar a{
+display:block;
+padding:12px;
+text-decoration:none;
+color:#333;
+border-bottom:1px solid #ddd;
+}
+
+.navbar a:hover{
+background:#f1f1f1;
+}
