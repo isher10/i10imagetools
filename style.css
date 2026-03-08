@@ -117,8 +117,9 @@ font-weight:bold;
 }
 
 .menu-icon{
-font-size:26px;
+font-size:28px;
 cursor:pointer;
+color:white;
 }
 
 /* Mobile Menu */
