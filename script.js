@@ -365,11 +365,44 @@ reader.readAsDataURL(file);
 
 function resizeImage(){
 
-const width = document.getElementById("width").value;
-const height = document.getElementById("height").value;
+const widthInput = document.getElementById("width").value;
+const heightInput = document.getElementById("height").value;
+
+const unit = document.getElementById("unit").value;
 
 const format = document.getElementById("format").value;
 const quality = document.getElementById("quality").value / 100;
+
+let width;
+let height;
+
+if(unit === "percent"){
+
+width = originalImage.width * (widthInput/100);
+height = originalImage.height * (heightInput/100);
+
+}
+
+else if(unit === "px"){
+
+width = widthInput;
+height = heightInput;
+
+}
+
+else if(unit === "cm"){
+
+width = widthInput * 37.8;
+height = heightInput * 37.8;
+
+}
+
+else if(unit === "inch"){
+
+width = widthInput * 96;
+height = heightInput * 96;
+
+}
 
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext("2d");
@@ -386,6 +419,7 @@ download.download = "resized-image."+format;
 download.style.display = "inline";
 
 }
+
 let lock = true;
 
 const widthInput = document.getElementById("width");
