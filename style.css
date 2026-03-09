@@ -423,3 +423,30 @@ max-width:45%;
 border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
+.tools-section{
+margin-top:40px;
+padding:20px;
+text-align:center;
+}
+
+.tools{
+display:flex;
+flex-direction:column;
+gap:15px;
+margin-top:20px;
+}
+
+.tool-card{
+background:#f1f1f1;
+padding:15px;
+border-radius:10px;
+text-decoration:none;
+color:#333;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.tool-card:hover{
+transform:translateY(-5px);
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
