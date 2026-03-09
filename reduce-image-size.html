@@ -25,12 +25,42 @@
 <h2>Reduce Image Size in KB</h2>
 
 <p>Upload your image and compress it easily.</p>
+<div class="tool-box">
 
-<input type="file" id="upload">
+<h2>Reduce Image Size In KB</h2>
 
-<input type="number" id="size" placeholder="Enter target size in KB">
+<p>Compress an image to 20kb, 50kb, 100kb, 200kb or any size.</p>
 
-<button onclick="compressImage()">Compress Image</button>
+<div class="upload-area">
+
+<p>Select Or Drag & Drop Image Here</p>
+
+<label for="imageInput" class="upload-btn">Select Image</label>
+
+<input type="file" id="imageInput" hidden>
+
+</div>
+
+<div class="size-box">
+
+<label>Size:</label>
+
+<input type="number" id="targetSize" value="100">
+
+<span>Kb</span>
+
+<button onclick="reduceImage()">Reduce Size</button>
+
+</div>
+
+<p class="note">
+Note: You can compress 10 images at once
+</p>
+
+<div id="resultBox"></div>
+
+</div>
+
 
 <br><br>
 
