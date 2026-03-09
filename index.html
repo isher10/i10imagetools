@@ -65,7 +65,9 @@ crossorigin="anonymous"></script>
 </header>
 
 <div class="container">
-
+<div class="tool-search">
+<input type="text" id="toolSearch" placeholder="Search tool..." onkeyup="searchTools()">
+</div>
 <h3>Our Free Image Tools</h3>
   <div class="intro">
 <h2>Free Online Image Tools</h2>
@@ -295,3 +297,14 @@ menu.style.left = "0%";
 
 </body>
 </html>
+<script>
+function searchTools() {
+let input = document.getElementById("toolSearch").value.toLowerCase();
+let tools = document.querySelectorAll(".tool-card");
+
+tools.forEach(function(tool){
+let text = tool.innerText.toLowerCase();
+tool.style.display = text.includes(input) ? "block" : "none";
+});
+}
+</script>
