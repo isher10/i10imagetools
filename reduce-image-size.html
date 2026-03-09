@@ -25,6 +25,7 @@
 <h2>Reduce Image Size in KB</h2>
 
 <p>Upload your image and compress it easily.</p>
+
 <div class="tool-box">
 
 <h2>Reduce Image Size In KB</h2>
@@ -37,8 +38,13 @@
 
 <label for="imageInput" class="upload-btn">Select Image</label>
 
-<input type="file" id="imageInput" hidden>
-  <img id="previewImage" style="max-width:200px; margin-top:15px; display:none;">
+<!-- UPDATED INPUT -->
+<input type="file" id="imageInput" accept="image/*" multiple hidden>
+
+<img id="previewImage" style="max-width:200px; margin-top:15px; display:none;">
+
+<!-- NEW MESSAGE BOX -->
+<div id="uploadInfo" style="margin-top:10px; font-size:14px;"></div>
 
 </div>
 
@@ -61,7 +67,6 @@ Note: You can compress 10 images at once
 <div id="resultBox"></div>
 
 </div>
-
 
 <br><br>
 
