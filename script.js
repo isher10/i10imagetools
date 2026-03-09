@@ -44,6 +44,7 @@ download.innerText = "Download Image";
 reader.readAsDataURL(file);
 
 }
+
 function convertToJPG() {
 
 const fileInput = document.getElementById("upload");
@@ -88,6 +89,7 @@ document.getElementById("compareBox").style.display = "block";
 reader.readAsDataURL(file);
 
 }
+
 function convertToPNG() {
 
 const fileInput = document.getElementById("upload");
@@ -130,6 +132,7 @@ downloadLink.innerText = "Download PNG";
 reader.readAsDataURL(file);
 
 }
+
 const uploadInput = document.getElementById("upload");
 const previewImage = document.getElementById("previewImage");
 
@@ -157,6 +160,7 @@ reader.readAsDataURL(file);
 });
 
 }
+
 const uploadArea = document.getElementById("uploadArea");
 const uploadFile = document.getElementById("upload");
 
@@ -186,6 +190,7 @@ uploadFile.dispatchEvent(event);
 });
 
 }
+
 const imageInfo = document.getElementById("imageInfo");
 
 if(uploadInput){
@@ -214,6 +219,7 @@ img.src = URL.createObjectURL(file);
 });
 
 }
+
 function reduceImage(){
 
 const fileInput = document.getElementById("imageInput");
@@ -289,6 +295,7 @@ document.getElementById("resultBox").innerHTML =
 reader.readAsDataURL(file);
 
 }
+
 function deleteImage(){
 
 document.getElementById("resultBox").innerHTML="";
@@ -296,29 +303,7 @@ document.getElementById("resultBox").innerHTML="";
 alert("Image deleted");
 
 }
-document.getElementById("imageInput").addEventListener("change", function(){
 
-const file = this.files[0];
-
-if(file){
-
-const reader = new FileReader();
-
-reader.onload = function(e){
-
-const preview = document.getElementById("previewImage");
-
-preview.src = e.target.result;
-
-preview.style.display = "block";
-
-}
-
-reader.readAsDataURL(file);
-
-}
-
-});
 function downloadImage(dataUrl){
 
 let name = document.getElementById("rename").value;
@@ -336,6 +321,7 @@ a.download = name + ".jpg";
 a.click();
 
 }
+
 const upload = document.getElementById("upload");
 const preview = document.getElementById("preview");
 const download = document.getElementById("download");
@@ -414,8 +400,10 @@ ctx.drawImage(originalImage,0,0,width,height);
 
 const dataUrl = canvas.toDataURL("image/"+format,quality);
 
+const filename = document.getElementById("filename").value || "resized-image";
+
 download.href = dataUrl;
-download.download = "resized-image."+format;
+download.download = filename + "." + format;
 download.style.display = "inline";
 
 }
