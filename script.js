@@ -581,3 +581,48 @@ img.src = e.target.result;
 reader.readAsDataURL(file);
 
 }
+function flipImage(){
+
+const file = document.getElementById("flipInput").files[0];
+
+if(!file){
+alert("Please upload image");
+return;
+}
+
+const reader = new FileReader();
+
+reader.onload = function(e){
+
+const img = new Image();
+
+img.onload = function(){
+
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = img.width;
+canvas.height = img.height;
+
+ctx.translate(canvas.width,0);
+ctx.scale(-1,1);
+
+ctx.drawImage(img,0,0);
+
+const flipped = canvas.toDataURL("image/jpeg");
+
+document.getElementById("flipPreview").src = flipped;
+document.getElementById("flipPreview").style.display = "block";
+
+document.getElementById("flipResult").innerHTML =
+'<a href="'+flipped+'" download="flipped-image.jpg">Download Flipped Image</a>';
+
+}
+
+img.src = e.target.result;
+
+}
+
+reader.readAsDataURL(file);
+
+}
