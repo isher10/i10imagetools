@@ -724,3 +724,48 @@ img.src = e.target.result;
 reader.readAsDataURL(file);
 
 }
+function convertPDF(){
+
+const file = document.getElementById("pdfInput").files[0];
+
+if(!file){
+alert("Please upload PDF");
+return;
+}
+
+const reader = new FileReader();
+
+reader.onload = function(){
+
+const typedarray = new Uint8Array(this.result);
+
+pdfjsLib.getDocument(typedarray).promise.then(function(pdf){
+
+pdf.getPage(1).then(function(page){
+
+const scale = 1.5;
+
+const viewport = page.getViewport({scale: scale});
+
+const canvas = document.getElementById("pdfCanvas");
+
+const context = canvas.getContext("2d");
+
+canvas.height = viewport.height;
+
+canvas.width = viewport.width;
+
+page.render({
+canvasContext: context,
+viewport: viewport
+});
+
+});
+
+});
+
+};
+
+reader.readAsArrayBuffer(file);
+
+}
