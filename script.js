@@ -48,7 +48,7 @@ function convertToJPG() {
 
 const fileInput = document.getElementById("upload");
 const downloadLink = document.getElementById("download");
-
+document.getElementById("progressText").innerText = "Converting Image...";
 if(fileInput.files.length === 0){
 alert("Please upload an image first");
 return;
