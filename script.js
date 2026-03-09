@@ -626,3 +626,21 @@ img.src = e.target.result;
 reader.readAsDataURL(file);
 
 }
+function removeBackground(){
+
+const file = document.getElementById("bgInput").files[0];
+
+if(!file){
+alert("Please upload image");
+return;
+}
+
+const preview = document.getElementById("bgPreview");
+
+preview.src = URL.createObjectURL(file);
+preview.style.display = "block";
+
+document.getElementById("bgResult").innerHTML =
+"<p>Background remover processing... (API required)</p>";
+
+}
