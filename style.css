@@ -90,7 +90,7 @@ font-weight:bold;
 }
 
 .menu-icon{
-font-size:28px;
+font-size:30px;
 cursor:pointer;
 }
 
@@ -106,12 +106,12 @@ background:rgba(60,80,100,0.95);
 padding-top:80px;
 transition:0.4s;
 z-index:999;
-text-align:left;
+text-align:right;
 }
 
 .mobile-menu a{
 display:block;
-color:white;
+color:blue;
 font-size:18px;
 padding:16px 30px;
 text-decoration:none;
@@ -332,16 +332,16 @@ color:white;
 .logo{
 display:flex;
 align-items:center;
-gap:8px;
+gap:6px;
 }
 
 .logo img{
-height:65px;
+height:70px;
 width:auto;
 }
 
 .logo span{
-font-size:20px;
+font-size:25px;
 font-weight:bold;
-color:white;
+color:blue;
 }
