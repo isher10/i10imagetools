@@ -140,14 +140,13 @@ margin:40px 0;
 width:70%;
 max-width:450px;
 padding:14px 18px;
-border:none;
+border:2px solid black;
 border-radius:30px;
 font-size:16px;
 background:#f0f0f0;
 box-shadow:0 6px 12px rgba(0,0,0,0.1);
 outline:none;
 }
-
 .search-box button{
 margin-left:-45px;
 width:40px;
@@ -160,6 +159,7 @@ cursor:pointer;
 font-size:16px;
 box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
+
 
 
 .search-box button:hover{
@@ -329,12 +329,4 @@ margin-top:40px;
 padding:15px;
 background:#222;
 color:white;
-}
-.search-btn{
-display:flex;
-align-items:center;
-justify-content:center;
-}
-#toolSearch{
-border:2px solid black;
 }
