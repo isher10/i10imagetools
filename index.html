@@ -443,7 +443,7 @@ menu.style.left = "0%";
 </script>
 
 <script src="script.js"></script>
-    <script>
+  <script>
 
 const searchInput = document.getElementById("toolSearch");
 const tools = document.querySelectorAll(".tool-btn");
@@ -459,11 +459,23 @@ tools.forEach(function(tool){
 
 let name = tool.textContent.toLowerCase();
 
+tool.innerHTML = tool.textContent;
+
 if(name.indexOf(value) !== -1){
-tool.style.display = "block";
+
+tool.style.display="block";
+
+if(value !== ""){
+let regex = new RegExp(value,"gi");
+tool.innerHTML = tool.textContent.replace(regex,"<span style='background:yellow;'>"+value+"</span>");
+}
+
 found++;
+
 }else{
-tool.style.display = "none";
+
+tool.style.display="none";
+
 }
 
 });
@@ -485,6 +497,6 @@ noTools.style.display="none";
 
 });
 
-</script>
+</script>  
 </body>
 </html>
