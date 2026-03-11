@@ -330,3 +330,11 @@ padding:15px;
 background:#222;
 color:white;
 }
+.search-btn{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+#toolSearch{
+border:2px solid black;
+}
