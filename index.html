@@ -565,65 +565,8 @@ noTools.style.display="none";
 
 });
 
-</script> 
-    <script>
-
-let stars = document.querySelectorAll("#stars i");
-let ratingText = document.getElementById("ratingText");
-
-let totalRating = localStorage.getItem("totalRating") || 0;
-let ratingCount = localStorage.getItem("ratingCount") || 0;
-
-function updateStars(avg){
-
-stars.forEach((star,index)=>{
-
-if(index < avg){
-star.classList.add("active");
-}else{
-star.classList.remove("active");
-}
-
-});
-
-}
-
-function showRating(){
-
-if(ratingCount == 0){
-ratingText.innerText = "No ratings yet";
-return;
-}
-
-let avg = (totalRating / ratingCount).toFixed(1);
-
-ratingText.innerText = avg + " ⭐ (" + ratingCount + ")";
-
-updateStars(Math.round(avg));
-
-}
-
-stars.forEach(star=>{
-
-star.addEventListener("click",function(){
-
-let value = this.getAttribute("data-value");
-
-totalRating = Number(totalRating) + Number(value);
-ratingCount = Number(ratingCount) + 1;
-
-localStorage.setItem("totalRating",totalRating);
-localStorage.setItem("ratingCount",ratingCount);
-
-showRating();
-
-});
-
-});
-
-showRating();
-
 </script>
+
 <script>
 
 function toggleDark(){
