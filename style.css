@@ -368,16 +368,22 @@ transform:scale(0.96);
 
 #topBtn{
 position:fixed;
-bottom:20px;
+bottom:25px;
 right:20px;
-background:none;
+width:60px;
+height:60px;
+border-radius:50%;
 border:none;
+background:linear-gradient(45deg,#007BFF,#00c6ff);
+color:white;
+font-size:28px;
 cursor:pointer;
 display:none;
 z-index:999;
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+transition:0.3s;
 }
 
-#topBtn img{
-width:60px;
-height:60px;
+#topBtn:hover{
+transform:scale(1.15);
 }
