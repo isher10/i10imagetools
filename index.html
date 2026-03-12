@@ -88,7 +88,7 @@ edit images quickly without installing any software.
 </div>
 <div class="search-box">
 <input type="text" id="toolSearch" onkeyup="searchTools()" placeholder="Search image tools...">
-<div id="suggestions"></div>
+
   <button>Search</button>
 </div>
 
@@ -517,7 +517,7 @@ const searchInput = document.getElementById("toolSearch");
 const tools = document.querySelectorAll(".tool-btn");
 const titles = document.querySelectorAll(".tools-title");
 const noTools = document.getElementById("noTools")
-const suggestionBox = document.getElementById("suggestions");
+
 
 searchInput.addEventListener("input", function(){
 
@@ -553,39 +553,7 @@ noTools.style.display="none";
 }
 
 });
-searchInput.addEventListener("input", function(){
 
-let value = this.value.toLowerCase();
-suggestionBox.innerHTML = "";
-
-if(value === ""){
-suggestionBox.style.display="none";
-return;
-}
-
-tools.forEach(tool=>{
-
-let name = tool.textContent.toLowerCase();
-
-if(name.includes(value)){
-
-let div = document.createElement("div");
-div.textContent = tool.textContent;
-
-div.onclick = function(){
-searchInput.value = tool.textContent;
-suggestionBox.style.display="none";
-};
-
-suggestionBox.appendChild(div);
-
-}
-
-});
-
-suggestionBox.style.display="block";
-
-});
 </script>
 
 <script>
