@@ -574,3 +574,21 @@ margin:5px;
 .stars i.active{
 color:#2196f3;
 }
+#suggestions{
+background:white;
+border:1px solid #ddd;
+max-height:200px;
+overflow-y:auto;
+position:absolute;
+width:90%;
+z-index:1000;
+}
+
+#suggestions div{
+padding:10px;
+cursor:pointer;
+}
+
+#suggestions div:hover{
+background:#f2f2f2;
+}
