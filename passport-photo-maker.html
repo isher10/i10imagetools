@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Passport Photo Maker - i10 Image Tools</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f2f4f8;
+}
+
+.header{
+background:#2d5cff;
+color:white;
+padding:15px;
+font-size:22px;
+font-weight:bold;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.menu{
+font-size:26px;
+cursor:pointer;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:40px 20px;
+text-align:center;
+}
+
+.title{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#666;
+margin-bottom:30px;
+}
+
+.upload-box{
+border:3px dashed #3c4ed8;
+background:white;
+padding:60px 20px;
+border-radius:8px;
+}
+
+.upload-box p{
+color:#777;
+font-size:16px;
+margin-bottom:20px;
+}
+
+.upload-btn{
+background:#1abc9c;
+border:none;
+padding:12px 28px;
+color:white;
+font-size:16px;
+border-radius:4px;
+cursor:pointer;
+}
+
+.upload-btn:hover{
+background:#16a085;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="header">
+
+<div>i10 IMAGE TOOLS</div>
+
+<div class="menu">☰</div>
+
+</div>
+
+
+<div class="container">
+
+<div class="title">Make Passport Size Photo</div>
+
+<div class="subtitle">
+Welcome to i10 Image Tools - Your Reliable Solution for Passport Size Images!
+</div>
+
+<div class="upload-box">
+
+<p>Select Or Drag & Drop Image Here</p>
+
+<input type="file" id="imageInput" accept="image/*" hidden>
+
+<button class="upload-btn" onclick="document.getElementById('imageInput').click()">
+Select Image
+</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+document.getElementById("imageInput").addEventListener("change",function(){
+
+let file=this.files[0];
+
+if(file){
+
+alert("Image Selected Successfully");
+
+}
+
+});
+
+</script>
+
+
+</body>
+
+</html>
