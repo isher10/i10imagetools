@@ -76,6 +76,36 @@ cursor:pointer;
 background:#16a085;
 }
 
+.size-panel{
+display:none;
+margin-top:40px;
+background:white;
+padding:25px;
+border-radius:8px;
+}
+
+.size-option{
+border:1px solid #ddd;
+padding:12px;
+margin:10px 0;
+cursor:pointer;
+border-radius:5px;
+}
+
+.size-option:hover{
+background:#f1f1f1;
+}
+
+.custom-box{
+margin-top:20px;
+display:none;
+}
+
+input{
+padding:8px;
+margin:5px;
+}
+
 </style>
 
 </head>
@@ -101,6 +131,7 @@ background:#16a085;
 Welcome to i10 Image Tools - Your Reliable Solution for Passport Size Images!
 </div>
 
+
 <div class="upload-box">
 
 <p>Select Or Drag & Drop Image Here</p>
@@ -113,22 +144,69 @@ Select Image
 
 </div>
 
+
+<div class="size-panel" id="sizePanel">
+
+<h3>Select Passport Size</h3>
+
+<div class="size-option">35 × 45 mm (India / UK / Europe)</div>
+
+<div class="size-option">2 × 2 inch (USA)</div>
+
+<div class="size-option">50 × 70 mm (Canada)</div>
+
+<div class="size-option" onclick="showCustom()">Custom Size</div>
+
+
+<div class="custom-box" id="customBox">
+
+<input type="number" placeholder="Width">
+
+<input type="number" placeholder="Height">
+
+<select>
+<option>MM</option>
+<option>CM</option>
+<option>INCH</option>
+<option>PX</option>
+</select>
+
+<br><br>
+
+<label>DPI</label>
+
+<input type="number" value="300">
+
+</div>
+
+</div>
+
 </div>
 
 
 <script>
 
-document.getElementById("imageInput").addEventListener("change",function(){
+let imageInput=document.getElementById("imageInput");
+
+let sizePanel=document.getElementById("sizePanel");
+
+imageInput.addEventListener("change",function(){
 
 let file=this.files[0];
 
 if(file){
 
-alert("Image Selected Successfully");
+sizePanel.style.display="block";
 
 }
 
 });
+
+function showCustom(){
+
+document.getElementById("customBox").style.display="block";
+
+}
 
 </script>
 
