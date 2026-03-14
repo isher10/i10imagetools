@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Passport Photo Size</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f5f6fb;
+}
+
+/* HEADER */
+
+.header{
+background:#4c5aa1;
+color:white;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.menu{
+font-size:26px;
+cursor:pointer;
+}
+
+/* MAIN BOX */
+
+.main-box{
+max-width:900px;
+margin:60px auto;
+border:3px solid #6b6fb8;
+padding:30px;
+background:white;
+text-align:center;
+}
+
+.main-box h2{
+color:#4c5aa1;
+margin-bottom:20px;
+}
+
+.dpi{
+margin-bottom:30px;
+}
+
+.dpi input{
+width:80px;
+padding:6px;
+font-size:16px;
+}
+
+/* SIZE BOXES */
+
+.size-grid{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+margin-bottom:30px;
+}
+
+.size-box{
+border:1px solid #ccc;
+width:180px;
+padding:20px;
+cursor:pointer;
+background:#fafafa;
+}
+
+.size-box:hover{
+border-color:#4c5aa1;
+}
+
+.selected{
+background:#4c5aa1;
+color:white;
+}
+
+.next-btn{
+padding:10px 30px;
+border:1px solid #4c5aa1;
+background:white;
+color:#4c5aa1;
+cursor:pointer;
+font-size:16px;
+}
+
+/* FOOTER */
+
+.footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:60px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+
+<div class="logo">i10 IMAGE TOOL</div>
+
+<div class="menu">☰</div>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="main-box">
+
+<h2>Select Passport Photo Size</h2>
+
+<div class="dpi">
+
+Default DPI:
+
+<input type="number" id="dpi" value="300">
+
+</div>
+
+<div class="size-grid">
+
+<div class="size-box selected" onclick="selectBox(this)">
+<b>3.5 CM x 4.5 CM</b><br>
+35 MM x 45 MM<br><br>
+India, Australia,<br>
+Europe, UK, Pakistan
+</div>
+
+<div class="size-box" onclick="selectBox(this)">
+<b>2 Inch x 2 Inch</b><br>
+51 MM x 51 MM<br><br>
+USA, Philippines
+</div>
+
+<div class="size-box" onclick="selectBox(this)">
+<b>50 MM x 70 MM</b><br>
+5 CM x 7 CM<br><br>
+Canada
+</div>
+
+<div class="size-box" onclick="selectBox(this)">
+<b>Custom</b><br><br>
+<input type="number" placeholder="6"> x 
+<input type="number" placeholder="6">
+</div>
+
+</div>
+
+<button class="next-btn">Next</button>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+© 2026 i10 Image Tool
+
+</div>
+
+<script>
+
+function selectBox(box){
+
+let boxes=document.querySelectorAll(".size-box");
+
+boxes.forEach(b=>b.classList.remove("selected"));
+
+box.classList.add("selected");
+
+}
+
+</script>
+
+</body>
+</html>
