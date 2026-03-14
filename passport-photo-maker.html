@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Passport Photo Maker</title>
 
@@ -12,7 +12,14 @@
 body{
 font-family:Arial;
 margin:0;
-background:#f5f5f5;
+background:#f4f4f4;
+}
+
+.header{
+background:#5a66a5;
+color:white;
+padding:15px;
+font-size:22px;
 }
 
 .container{
@@ -22,25 +29,29 @@ padding:20px;
 background:white;
 }
 
-h1{
+.upload-box{
+border:3px dashed #9aa4d6;
+padding:50px;
 text-align:center;
-margin-top:20px;
+margin-top:30px;
 }
 
-.tool-image{
+.upload-btn{
+background:#198754;
+color:white;
+border:none;
+padding:12px 25px;
+font-size:16px;
+cursor:pointer;
+}
+
+.ad-box{
+height:150px;
+background:#eee;
+margin-top:30px;
 text-align:center;
-margin:30px 0;
-}
-
-.tool-image img{
-width:100%;
-max-width:500px;
-border-radius:10px;
-}
-
-p{
-line-height:1.7;
-color:#444;
+line-height:150px;
+color:#666;
 }
 
 </style>
@@ -49,37 +60,53 @@ color:#444;
 
 <body>
 
+<div class="header">
+Image Tool
+</div>
+
 <div class="container">
 
-<h1>Passport Photo Maker</h1>
+<h1>Make Passport Size Photo</h1>
 
-<p style="text-align:center;">
-Create passport size photos easily online.
+<p>
+Welcome to Passport Photo Maker Tool
 </p>
 
-<div class="tool-image">
+<div class="upload-box">
 
-<img src="passport-demo.jpg">
+<p>Select Or Drag & Drop Image Here</p>
 
+<input type="file">
+
+<br><br>
+
+<button class="upload-btn">Select Image</button>
+
+</div>
+
+<div class="ad-box">
+Advertisements
 </div>
 
 <h2>How to Make Passport Size Photo</h2>
 
 <p>
 Upload your photo and select the passport size like 3.5cm x 4.5cm or 2x2 inch.
-You can crop the image, adjust brightness and download it ready for printing.
 </p>
 
 <h2>Features</h2>
 
-<p>
-• Passport size photo maker<br>
-• Resize image automatically<br>
-• Ready for printing<br>
-• Easy to use online tool
-</p>
+<ul>
+
+<li>Passport size photo maker</li>
+<li>Resize image automatically</li>
+<li>Ready for printing</li>
+<li>Easy to use online tool</li>
+
+</ul>
 
 </div>
 
 </body>
+
 </html>
