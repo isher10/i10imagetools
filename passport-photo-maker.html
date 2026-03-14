@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,29 +9,36 @@
 <style>
 
 body{
-font-family:Arial;
 margin:0;
+font-family:Arial;
 background:#f4f4f4;
 }
+
+/* Header */
 
 .header{
 background:#5a66a5;
 color:white;
 padding:15px;
 font-size:22px;
+font-weight:bold;
 }
+
+/* Container */
 
 .container{
 max-width:900px;
 margin:auto;
-padding:20px;
+padding:30px;
 background:white;
+text-align:center;
 }
+
+/* Upload Box */
 
 .upload-box{
 border:3px dashed #9aa4d6;
-padding:50px;
-text-align:center;
+padding:60px;
 margin-top:30px;
 }
 
@@ -40,18 +46,11 @@ margin-top:30px;
 background:#198754;
 color:white;
 border:none;
-padding:12px 25px;
+padding:12px 30px;
 font-size:16px;
 cursor:pointer;
-}
-
-.ad-box{
-height:150px;
-background:#eee;
-margin-top:30px;
-text-align:center;
-line-height:150px;
-color:#666;
+border-radius:5px;
+margin-top:15px;
 }
 
 </style>
@@ -61,49 +60,27 @@ color:#666;
 <body>
 
 <div class="header">
-Image Tool
+i10 IMAGE TOOL
 </div>
 
 <div class="container">
 
 <h1>Make Passport Size Photo</h1>
 
-<p>
-Welcome to Passport Photo Maker Tool
-</p>
-
 <div class="upload-box">
 
 <p>Select Or Drag & Drop Image Here</p>
 
-<input type="file">
+<input type="file" id="imageInput" hidden>
 
-<br><br>
+<button class="upload-btn"
+onclick="document.getElementById('imageInput').click()">
 
-<button class="upload-btn">Select Image</button>
+Select Image
+
+</button>
 
 </div>
-
-<div class="ad-box">
-Advertisements
-</div>
-
-<h2>How to Make Passport Size Photo</h2>
-
-<p>
-Upload your photo and select the passport size like 3.5cm x 4.5cm or 2x2 inch.
-</p>
-
-<h2>Features</h2>
-
-<ul>
-
-<li>Passport size photo maker</li>
-<li>Resize image automatically</li>
-<li>Ready for printing</li>
-<li>Easy to use online tool</li>
-
-</ul>
 
 </div>
 
