@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:white;
+font-family:Arial, sans-serif;
+text-align:center;
+}
+
+/* VIDEO */
+
+video{
+width:280px;
+max-width:80%;
+}
+
+/* POWERED BY */
+
+.powered{
+margin-top:20px;
+font-size:16px;
+letter-spacing:3px;
+color:#333;
+}
+
+/* LOGO */
+
+.logo{
+width:120px;
+margin-top:10px;
+}
+
+/* FADE ANIMATION */
+
+.fade-out{
+animation:fadeout 0.6s forwards;
+}
+
+@keyframes fadeout{
+to{
+opacity:0;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- VIDEO ANIMATION -->
+
+<video id="introVideo" autoplay muted playsinline>
+<source src="intro.mp4" type="video/mp4">
+</video>
+
+<!-- POWERED BY -->
+
+<div class="powered">POWERED BY</div>
+
+<!-- LOGO -->
+
+<img src="logoisher.png" class="logo">
+
+<script>
+
+const video = document.getElementById("introVideo");
+
+video.onended = function(){
+
+document.body.classList.add("fade-out");
+
+setTimeout(function(){
+
+window.location.href="index.html";
+
+},600);
+
+};
+
+</script>
+
+</body>
+</html>
