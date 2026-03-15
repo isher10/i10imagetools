@@ -621,3 +621,22 @@ text-decoration:none;
 color:black;
 background:white;
 }
+/* LOGO ANIMATION */
+
+.main-logo{
+animation: zoomlogo 2s ease;
+}
+
+@keyframes zoomlogo{
+
+0%{
+transform:scale(0.3);
+opacity:0;
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
